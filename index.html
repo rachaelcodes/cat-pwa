@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cat Chooser</title>
+  </head>
+  <body>
+
+    <form id="catform">
+  <h1>Which cat would you like to see today?</h1>
+    <div>
+      <input type="radio" id="catChoice1"
+       name="cat" value="lion">
+      <label for="catChoice1">Lion</label>
+
+      <input type="radio" id="catChoice2"
+       name="cat" value="tiger">
+      <label for="catChoice2">Tiger</label>
+
+      <input type="radio" id="catChoice3"
+       name="cat" value="cheetah">
+      <label for="catChoice3">Cheetah</label>
+
+      <input type="radio" id="catChoice4"
+       name="cat" value="snow-leopard">
+      <label for="catChoice4">Snow Leopard</label>
+    </div>
+    <div>
+      <button type="submit">Choose</button>
+    </div>
+  </form>
+  <div id = 'imageDiv'>
+    <h2>Today's choice</h2>
+  </div>
+  <div id = 'previous'>
+    <h2>Previous choices</h2>
+  </div>
+  <script src="localforage.js"></script>
+  <script src = 'app.js'></script>
+  </body>
+</html>
