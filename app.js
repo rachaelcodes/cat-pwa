@@ -72,4 +72,11 @@ document.addEventListener('DOMContentLoaded', function(){
    })
  })
 
+// register service worker
+if ('serviceWorker' in navigator) {
+   navigator.serviceWorker
+     .register('/serviceworker.js')
+      .then(console.log('[ServiceWorker] registered'));
+ }
+
 })();
