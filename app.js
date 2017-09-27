@@ -4,7 +4,7 @@ var form = document.getElementById('catform');
 var imageDiv = document.getElementById('imageDiv');
 var previous = document.getElementById('previous');
 
-var catChoices = [document.getElementById('catChoice1'), document.getElementById('catChoice2'), document.getElementById('catChoice3'), document.getElementById('catChoice4')];
+var catChoices = [document.getElementById('catChoice1'), document.getElementById('catChoice2'), document.getElementById('catChoice3')];
 
 var currentChoice = '';
 var selectedCat = [];
@@ -27,14 +27,17 @@ var picture = function(choice){
       image.height = "204";
       image.width = "267";
       break;
-    case 'snow-leopard':
-      image.src = 'https://www.animalanswers.co.uk/wp-content/uploads/2014/12/tumblr_n0dojavSaI1rpe379o1_r1_500.gif';
-      image.height = "300";
-      image.width = "250";
-      break;
   }
   imageDiv.appendChild(image);
 };
+
+var getPicture = function (choice){
+  var image = document.createElement("img");
+  image.src = 'https://source.unsplash.com/800x450/?'+choice;
+  image.height = "450";
+  image.width = "800";
+  imageDiv.appendChild(image);
+}
 
 var previousChoices = function(type, d){
   var p = document.createElement('p');
@@ -51,7 +54,7 @@ form.addEventListener('submit', function (e){
   catChoices.forEach(function(choice){
     if (choice.checked) {
       currentChoice= choice.value;
-      picture(currentChoice);
+      getPicture(currentChoice);
       selectedCat.push({animal: currentChoice, date: Date.now()});
       saveSelectedCat();
     }

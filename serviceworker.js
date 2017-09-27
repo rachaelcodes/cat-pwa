@@ -1,5 +1,5 @@
-var cacheName = 'catPWA';
-var filesToCache = ['index.html', 'app.js', 'localforage.js'];
+var cacheName = 'catPWAv2';
+var filesToCache = ['index.html', 'app.js', 'localforage.js', 'cat.jpg'];
 
 //caches app shell
 self.addEventListener('install', function(e){
